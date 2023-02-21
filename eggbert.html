@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+  background-color: #07648d;
+  color:lightblue;
+}
+
+    .center {
+       margin-left: auto;
+       margin-right: auto;
+        }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+   
+    .row {
+      display: flex;
+    }
+    .column {
+      /* flex: 50%; */
+      padding: 10px;
+      height: 300px; /* Should be removed. Only for demonstration */
+    }
+
+
+  </style>
+  <script>
+         function add()
+         {
+           var in1a, in1b, ans1, in2a, in2b, ans2, in3a, in3b, ans3, in4a, in4b, ans4, in5a, in5b, ans5, in6a, in6b, ans6, in7a, in7b, ans7, ansTotal;
+
+           in1a = parseFloat(document.getElementById("stringMass").value);
+           in1b = parseFloat(document.getElementById("stringQuant").value);
+           ans1 = in1a * in1b;
+
+           in2a = parseFloat(document.getElementById("bagMass").value);
+           in2b = parseFloat(document.getElementById("bagQuant").value);
+           ans2 = in2a * in2b;
+
+           in3a = parseFloat(document.getElementById("spongeMass").value);
+           in3b = parseFloat(document.getElementById("spongeQuant").value);
+           ans3 = in3a * in3b;
+
+           in4a = parseFloat(document.getElementById("cottonMass").value);
+           in4b = parseFloat(document.getElementById("cottonQuant").value);
+           ans4 = in4a * in4b;
+
+           in5a = parseFloat(document.getElementById("pipeCleanerMass").value);
+           in5b = parseFloat(document.getElementById("pipeCleanerQuant").value);
+           ans5 = in5a * in5b;
+
+           in6a = parseFloat(document.getElementById("rubberBandMass").value);
+           in6b = parseFloat(document.getElementById("rubberBandQuant").value);
+           ans6 = in6a * in6b;
+
+           in7a = parseFloat(document.getElementById("cockpitMass").value);
+           in7b = parseFloat(document.getElementById("cockpitQuant").value);
+           ans7 = in7a * in7b;
+
+          ansTotal = ans1 + ans2 + ans3 + ans4 + ans5 + ans6 + ans7;
+
+          document.getElementById("answer1").value = ans1;
+          document.getElementById("answer2").value = ans2;
+          document.getElementById("answer3").value = ans3;
+          document.getElementById("answer4").value = ans4;
+          document.getElementById("answer5").value = ans5;
+          document.getElementById("answer6").value = ans6;
+          document.getElementById("answer7").value = ans7;
+          document.getElementById("answer").value = ansTotal;
+         }
+  </script>
+  <title>Eggbert Calc</title>
+</head>
+
+<body>  
+
+<!-- <form> -->
+<table class="center">  
+<tr><th><h1>PROTOTYPE WEIGHT CAL</h1></th></tr>
+<tr><th><h3>Input the mass and quantities of the objects you will be using for your prototype below.</h3></tr></tr>
+<tr><th><h3>You MUST input a number. If you will not use an item, please input zero.</h></th></tr>
+</table>
+<table class="center"> 
+<tr>
+  <td></td>
+  <th><h2>[Object Mass]</h2></td>
+  <th><h2>[Object Quantity]</h2></td>
+  <th><h2>[Total Mass (Q*Q)]</h2></td>
+</tr>
+
+  <tr>
+    <td><b>String:<b></td>
+    <td><input type="text" id="stringMass" name="stringMass" placeholder="String Mass">(g)</td>
+    <td><input type="text" id="stringQuant" name="stringQuant" placeholder="String Quantity"></td>
+    <td><input type="number" id="answer1"></th>
+  </tr>
+
+  <tr>
+    <td><b>Plastic Bag:<b></td>
+    <td><input type="text" id="bagMass" name="bagMass" placeholder="Plastic Bag Mass">(g)</td>
+    <td><input type="text" id="bagQuant" name="bagQuant" placeholder="Plastic Bag Quantity"></td>
+    <td><input type="number" id="answer2"></th>
+  </tr>
+
+  <tr>
+    <td><b>Sponge:<b></td>
+    <td><input type="text" id="spongeMass" name="spongeMass" placeholder="Sponge Mass">(g)</td>
+    <td><input type="text" id="spongeQuant" name="spongeQuant" placeholder="Sponge Quantity"></td>
+    <td><input type="number" id="answer3"></th>
+  </tr>
+
+  <tr>
+    <td><b>Cotton Ball:<b></td>
+    <td><input type="text" id="cottonMass" name="cottonMass" placeholder="Cotton Ball Mass">(g)</td>
+    <td><input type="text" id="cottonQuant" name="cottonQuant" placeholder="Cotton Ball Quantity"></td>
+    <td><input type="number" id="answer4"></th>
+  </tr>
+
+  <tr>
+    <td><b>Pipe Cleaner:</b></td>
+    <td><input type="text" id="pipeCleanerMass" name="pipeCleanerMass" placeholder="Pipe Cleaner Mass">(g)</td>
+    <td><input type="text" id="pipeCleanerQuant" name="pipeCleanerQuant" placeholder="Pipe Cleaner Quantity"></td>
+    <td><input type="number" id="answer5"></th>
+  </tr>
+
+  <tr>
+    <td><b>Rubber Band:</b></td>
+    <td><input type="text" id="rubberBandMass" name="rubberBandMass" placeholder="Rubber Band Mass">(g)</td>
+    <td><input type="text" id="rubberBandQuant" name="rubberBandQuant" placeholder="Rubber Band Quantity"></td>
+    <td><input type="number" id="answer6"></th>
+  </tr>
+
+  <tr>
+    <td><b>Cockpit Chair:</b></td>
+    <td><input type="text" id="cockpitMass" name="cockpitMass" value="40">(g)</td>
+    <td><input type="text" id="cockpitQuant" name="cockpitQuant" value="1"></td>
+    <td><input type="number" id="answer7"></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><h2>Sum = <br>
+    <input id="answer"></h2></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td> <button onclick="add()">SUBMIT</button> </td>
+  </tr>
+  
+</table>
+
+<!-- </form> -->
+</body>
